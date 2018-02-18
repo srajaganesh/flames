@@ -18,10 +18,13 @@ int main()
     strlwr(s2);
     int t=strlen(s1)+strlen(s2);
     int s11[26]={0},s12[26]={0};
+       
     for(i=0;i<strlen(s1);i++)
         s11[s1[i]-'a']++;
+       
     for(i=0;i<strlen(s2);i++)
         s12[s2[i]-'a']++;
+       
     for(i=0;i<26;i++)
     {
         if(s11[i]==s12[i])
@@ -33,12 +36,16 @@ int main()
 
     if(t==3 || t==5 || t==14)
         printf("FRIENDS");
+       
     else if(t==10)
          printf("LOVER");
+       
     else if(t==8 || t==13 || t==12)
          printf("AFFECTION");
+       
     else if(t==6 || t==11 || t==15)
          printf("MARRIAGE");
+       
     else if(t==2 || t==4 || t==7 || t==9)
          printf("ENEMY");
     else
